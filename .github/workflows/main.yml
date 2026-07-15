@@ -1,4 +1,4 @@
-name: DEVXRDP â€“ RDP + Tailscale (5 Hours)
+name: RAJA â€“ RDP + Tailscale (5 Hours)
 
 on:
   workflow_dispatch:
@@ -12,7 +12,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: devxrdp-single-session
+  group: raja-single-session
   cancel-in-progress: false
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
       RDP_PASS: Raja@1234
 
       # ===== FIXED TAILSCALE NAME =====
-      TS_HOSTNAME: DEVXRDP
+      TS_HOSTNAME: RAJA
 
     steps:
 
@@ -57,9 +57,9 @@ jobs:
 
           Write-Host ""
           Write-Host "================================="
-          Write-Host " RDP NAME : DEVXRDP"
+          Write-Host " RDP NAME : RAJA"
           Write-Host " RDP IP   : $ip"
-          Write-Host " USER     : DEVXRDP"
+          Write-Host " USER     : RAJA"
           Write-Host "================================="
 
       - name: Enable RDP
@@ -90,4 +90,4 @@ jobs:
           }
 
       - name: Finished
-        run: echo "DEVXRDP session ended after 5 hours"
+        run: echo "RAJA session ended after 5 hours"
