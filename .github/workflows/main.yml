@@ -50,7 +50,7 @@ jobs:
             --accept-dns=false `
             --reset
 
-      - name: Show Tailscale IP (DEVXRDP)
+      - name: Show Tailscale IP (RAJA)
         run: |
           $exe = "$env:ProgramFiles\Tailscale\tailscale.exe"
           $ip = & $exe ip -4 | Select-Object -First 1
